@@ -1,0 +1,40 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar-brand {
+  max-width: 15%;
+  max-height: 100%;
+}
+.navbar-brand img {
+  width: 100%;
+  height: auto;
+}
+.nav-link {
+  font-size: 18px !important;
+  color: #fff !important;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background-color: #070e5c !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+/* ======================================== */
+/* ============== MEDIA QUERY ============= */
+/* ======================================== */
+@media only screen and (max-width: 768px) {
+  .navbar-brand {
+    max-width: 70% !important;
+    max-height: 100%;
+  }
+  .navbar-brand img {
+    width: 100%;
+    height: auto;
+  }
+}
