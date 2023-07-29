@@ -10,30 +10,81 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+
+                <?php if ($title == "Home | Shambhunath Memorial Nursing College") { ?>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
+                <?php } else { ?>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                </li>
+                <?php } ?>
+
+                <?php if ($title == "About us | Shambhunath Memorial Nursing College") { ?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Who we are
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="about-us.php">About us</a></li>
+                        <li><a class="dropdown-item" href="about-us.php#directors">Directors</a></li>
+                    </ul>
+                </li>
+                <?php } else { ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Who we are
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">About us</a></li>
-                        <li><a class="dropdown-item" href="#">Directors</a></li>
+                        <li><a class="dropdown-item" href="about-us.php">About us</a></li>
+                        <li><a class="dropdown-item" href="about-us.php#directors">Directors</a></li>
                     </ul>
                 </li>
+                <?php } ?>
+
+                <?php if ($title == "Admissions | Shambhunath Memorial Nursing College") { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Admissions</a>
+                    <a class="nav-link active" href="admissions.php">Admissions</a>
                 </li>
+                <?php } else { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Academics</a>
+                    <a class="nav-link" href="admissions.php">Admissions</a>
                 </li>
+                <?php } ?>
+
+                <?php if ($title == "Courses | Shambhunath Memorial Nursing College") { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link active" href="courses.php">Courses</a>
                 </li>
+                <?php } else { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="courses.php">Courses</a>
+                </li>
+                <?php } ?>
+
+                <?php if ($title == "Contact | Shambhunath Memorial Nursing College") { ?>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.php">Contact</a>
+                </li>
+                <?php } else { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact</a>
+                </li>
+                <?php } ?>
             </ul>
             <form class="d-flex" role="search">
+                <a class="navbar-social-media" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <!-- <a class="navbar-social-media" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a class="navbar-social-media" href="#">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a> -->
                 <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button> -->
             </form>

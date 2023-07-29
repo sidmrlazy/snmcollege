@@ -1,33 +1,36 @@
 <div class="footer">
     <div>
-        <div>
-            <p>
+        <div class="footer-logo">
+            <img src="assets/logo/footer-logo.png" alt="">
+        </div>
+        <div class="footer-media-content">
+            <p class="footer-label">
                 <ion-icon name="location-outline"></ion-icon> Address
             </p>
-            <p>Bandhwa, Sant Kabir Nagar, Uttar Pradesh- 272175</p>
+            <p class="footer-res">Bandhwa, Sant Kabir Nagar, Uttar Pradesh- 272175</p>
         </div>
 
-        <div>
-            <p>
+        <div class="footer-media-content">
+            <p class="footer-label">
                 <ion-icon name="headset-outline"></ion-icon> Contact
             </p>
-            <a href="tel:+918400275467">+91 8400275467 </a>
-            <a href="tel:+918382947373">+91 8382947373 </a>
-            <a href="tel:+917054937373">+91 7054937373 </a>
+            <a class="footer-res-link" href="tel:+918400275467">+91 8400275467 |</a>
+            <a class="footer-res-link" href="tel:+918382947373">+91 8382947373 |</a>
+            <a class="footer-res-link" href="tel:+917054937373">+91 7054937373 |</a>
         </div>
     </div>
-    <div>
+    <div class="footer-menu-content">
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Directors</a></li>
-            <li><a href="">Admissions</a></li>
-            <li><a href="">Academics</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about-us.php">About Us</a></li>
+            <li><a href="about-us.php#directors">Directors</a></li>
+            <li><a href="admissions.php">Admissions</a></li>
+            <li><a href="courses.php">Courses</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
     </div>
 
-    <div>
+    <div class="footer-menu-content">
         <ul>
             <li><a href="">Privacy Policy</a></li>
             <li><a href="">Disclaimer</a></li>
