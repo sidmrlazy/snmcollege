@@ -49,7 +49,41 @@
                 '$contact_date'
             )";
                     $res = mysqli_query($connection, $query);
-                    if ($res) { ?>
+                    if ($res) {
+                        $to = "snmnursingcollege@gmail.com, connectonlyn@onlynus.com";
+                        $subject = "Shambhu Nath Memorial College | Contact";
+                        $message = "
+                                    <html>
+                                    <head>
+                                    <title>HTML email</title>
+                                    </head>
+                                    <body>
+                                    <p>This email contains HTML Tags!</p>
+                                    <table>
+                                    <tr>
+                                    <th>NAME</th>
+                                    <th>CONTACT</th>
+                                    <th>EMAIL</th>
+                                    <th>REASON</th>
+                                    <th>DETAILS</th>
+                                    <th>DATE</th>
+                                    </tr>
+                                    <tr>
+                                    <td>" . $contact_name . "</td>
+                                    <td>" . $contact_number . "</td>
+                                    <td>" . $contact_email . "</td>
+                                    <td>" . $contact_reason . "</td>
+                                    <td>" . $contact_details . "</td>
+                                    <td>" . $contact_date . "</td>
+                                    </tr>
+                                    </table>
+                                    </body>
+                                    </html>
+                                    ";
+                        $headers = "MIME-Version: 1.0" . "\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                        mail($to, $subject, $message, $headers);
+                    ?>
             <div class="alert alert-success w-100 mt-3 mb-3" role="alert">
                 Thank you for connecting with us. We will connect with you shortly!
             </div>
