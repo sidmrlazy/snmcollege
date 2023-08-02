@@ -6,7 +6,7 @@
         </div>
 
         <div class="homepage-section-2-card" id="yellow">
-            <h2>Nurturing Healthcare Leaders for Tomorrow"</h2>
+            <h2>Nurturing Healthcare Leaders for Tomorrow</h2>
             <p>Medical excellence thrives at Shambhunath Memorial Nursing College</p>
         </div>
 
