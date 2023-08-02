@@ -52,6 +52,8 @@
 .homepage-section-2-card h2 {
   margin: 0;
   font-weight: 600;
+  font-size: 24px !important;
+  color: #070e5c !important;
 }
 .homepage-section-2-card p {
   font-size: 18px;
