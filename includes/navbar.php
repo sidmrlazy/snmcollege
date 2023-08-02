@@ -76,7 +76,8 @@
                 <?php } ?>
             </ul>
             <form class="d-flex" role="search">
-                <a class="navbar-social-media" href="#">
+                <a class="navbar-social-media" href="https://www.facebook.com/Shambhunathparamedicalcollege/"
+                    target="_blank">
                     <ion-icon name="logo-facebook"></ion-icon>
                 </a>
                 <!-- <a class="navbar-social-media" href="#">
