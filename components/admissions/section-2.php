@@ -33,7 +33,39 @@
                 '$admission_date'
             )";
                 $result = mysqli_query($connection, $query);
-                if ($result) { ?>
+                if ($result) {
+                    $to = "snmnursingcollege@gmail.com, connectonlyn@onlynus.com";
+                    $subject = "Shambhu Nath Memorial College | Admissions";
+                    $message = "
+                            <html>
+                            <head>
+                            <title>HTML email</title>
+                            </head>
+                            <body>
+                            <p>This email contains HTML Tags!</p>
+                            <table>
+                            <tr>
+                            <th>NAME</th>
+                            <th>CONTACT</th>
+                            <th>EMAIL</th>
+                            <th>COURSE</th>
+                            <th>DATE</th>
+                            </tr>
+                            <tr>
+                            <td>" . $admission_name . "</td>
+                            <td>" . $admission_contact . "</td>
+                            <td>" . $admission_email . "</td>
+                            <td>" . $admission_course . "</td>
+                            <td>" . $admission_date . "</td>
+                            </tr>
+                            </table>
+                            </body>
+                            </html>
+                            ";
+                    $headers = "MIME-Version: 1.0" . "\r\n";
+                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                    mail($to, $subject, $message, $headers);
+                ?>
         <div class="alert alert-success w-100 mt-3 mb-3" role="alert">
             Thank you for applying. We will connect with you shortly!
         </div>
