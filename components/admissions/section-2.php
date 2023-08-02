@@ -1,24 +1,20 @@
 <div class="container admission-section-2-container">
-    <div class="admission-section-2-row">
-        <div class="admission-section-2-img">
-            <img src="assets/images/admissions-img.png" alt="">
-        </div>
-        <?php
-        require('includes/connection.php');
-        if (isset($_POST['submit'])) {
-            $admission_name = $_POST['admission_name'];
-            $admission_contact = $_POST['admission_contact'];
-            $admission_email = $_POST['admission_email'];
-            $admission_course = $_POST['admission_course'];
-            $admission_date = date('d-m-Y');
+    <?php
+    require('includes/connection.php');
+    if (isset($_POST['submit'])) {
+        $admission_name = $_POST['admission_name'];
+        $admission_contact = $_POST['admission_contact'];
+        $admission_email = $_POST['admission_email'];
+        $admission_course = $_POST['admission_course'];
+        $admission_date = date('d-m-Y');
 
-            if (empty($admission_course) || $admission_course == 'null') { ?>
-        <div class="alert alert-info w-100 mt-3 mb-3" role="alert">
-            Please select course!
-        </div>
-        <?php
-            } else {
-                $query = "INSERT INTO `admissions`(
+        if (empty($admission_course) || $admission_course == 'null') { ?>
+    <div class="alert alert-info w-100 mt-3 mb-3" role="alert">
+        Please select course!
+    </div>
+    <?php
+        } else {
+            $query = "INSERT INTO `admissions`(
                 `admission_name`,
                 `admission_contact`,
                 `admission_email`,
@@ -32,11 +28,11 @@
                 '$admission_course',
                 '$admission_date'
             )";
-                $result = mysqli_query($connection, $query);
-                if ($result) {
-                    $to = "snmnursingcollege@gmail.com, connectonlyn@onlynus.com";
-                    $subject = "Shambhu Nath Memorial College | Admissions";
-                    $message = "
+            $result = mysqli_query($connection, $query);
+            if ($result) {
+                $to = "snmnursingcollege@gmail.com, connectonlyn@onlynus.com";
+                $subject = "Shambhu Nath Memorial College | Admissions";
+                $message = "
                             <html>
                             <head>
                             <title>HTML email</title>
@@ -62,19 +58,24 @@
                             </body>
                             </html>
                             ";
-                    $headers = "MIME-Version: 1.0" . "\r\n";
-                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                    mail($to, $subject, $message, $headers);
-                ?>
-        <div class="alert alert-success w-100 mt-3 mb-3" role="alert">
-            Thank you for applying. We will connect with you shortly!
-        </div>
-        <?php
-                }
+                $headers = "MIME-Version: 1.0" . "\r\n";
+                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                mail($to, $subject, $message, $headers);
+            ?>
+    <div class="alert alert-success w-100 mt-3 mb-3" role="alert">
+        Thank you for applying. We will connect with you shortly!
+    </div>
+    <?php
             }
         }
+    }
 
-        ?>
+    ?>
+    <div class="admission-section-2-row">
+        <div class="admission-section-2-img">
+            <img src="assets/images/admissions-img.png" alt="">
+        </div>
+
         <form action="" method="POST" class="form-container">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Name</label>
