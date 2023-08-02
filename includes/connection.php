@@ -1,8 +1,8 @@
 <?php
 // PRODUCTION
 $hostname = "localhost";
-$username = "u442267587_snm";
-$database = "u442267587_snm";
+$username = "u976956619_snm";
+$database = "u976956619_snm";
 $password = "Darthvader@order66";
 
 // DEVELOPMENT
